@@ -1,0 +1,16 @@
+# Давно не работал с postgres, поэтому компоуз практически весь взял из поиска
+
+services:
+  database:
+    image: "postgres:17"
+
+    ports:
+      - 5432:5432
+
+    environment:
+      POSTGRES_USER: kovs
+      POSTGRES_PASSWORD: 112233
+      POSTGRES_DB: kovs-db
+
+    volumes:
+      - ./db-data/:/var/lib/postgresql/data/
